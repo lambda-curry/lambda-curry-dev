@@ -129,6 +129,10 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .title span {
+    font-family: 'Kaushan Script', cursive;
+  }
 }
 
 .senior {
@@ -157,4 +161,12 @@
   @apply mt-4;
   font-weight: bold;
   text-align: center;
+}
+
+.level-up {
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  height: 26px;
+  width: auto;
 }

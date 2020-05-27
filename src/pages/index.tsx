@@ -3,6 +3,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Logo from '../images/logo.svg'
+import LevelUp from '../images/levelUp.svg'
 import Abstract from '../images/Abstract.webm'
 import CoffeeBeans from '../images/CoffeeBeans.webm'
 import styles from '../styles/index.module.scss'
@@ -26,7 +27,9 @@ const IndexPage = () => (
       <Hero />
       <div className={styles['col']}>
         <div className={classNames(styles['section'], styles['austin'])}>
-          <h2 className={styles['title']}>Based in Austin,&nbsp;TX</h2>
+          <h2 className={styles['title']}>
+            Based in <span className={styles['austin']}>Austin, Texas</span>
+          </h2>
           <p>
             We are an all American dev shop in the middle of the "Silicon
             Hills". We are readily available when your team is working, so there
@@ -37,7 +40,14 @@ const IndexPage = () => (
           <video autoPlay muted loop preload="none">
             <source src={CoffeeBeans} type="video/webm" />
           </video>
-          <h2 className={styles['title']}>Senior Level Talent</h2>
+          <h2 className={styles['title']}>
+            Senior Level Talent{' '}
+            <img
+              className={styles['levelUp']}
+              src={LevelUp}
+              alt="level up icon"
+            />
+          </h2>
           <p>
             We experience delivering high-impact projects. We enjoy the hard
             challenges and can help build an environment that is friendly for
@@ -48,7 +58,9 @@ const IndexPage = () => (
           <video autoPlay muted loop preload="none">
             <source src={Abstract} type="video/webm" />
           </video>
-          <h2 className={styles['title']}>More Than Developers</h2>
+          <h2 className={styles['title']}>
+            More Than <span className="monospace">{`<Developers />`}</span>
+          </h2>
           <p>
             We are problem solvers, entrepreneurs, designers, architects,
             engineers, and much more. Together we can discover the best
