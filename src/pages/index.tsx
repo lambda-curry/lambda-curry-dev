@@ -28,13 +28,15 @@ const IndexPage = () => (
       <div className={styles['col']}>
         <div className={classNames(styles['section'], styles['austin'])}>
           <h2 className={styles['title']}>
-            Based in <span className={styles['austin']}>Austin, Texas</span>
+            Based in <span>Austin, Texas</span>
           </h2>
-          <p>
-            We are an all American dev shop in the middle of the "Silicon
-            Hills". We are readily available when your team is working, so there
-            are fewer communication breakdowns.
-          </p>
+          <div className={styles['sectionContent']}>
+            <p>
+              We are an all American dev shop in the middle of the "Silicon
+              Hills". We are readily available when your team is working, so
+              there are fewer communication breakdowns.
+            </p>
+          </div>
         </div>
         <div className={classNames(styles['section'], styles['senior'])}>
           <video autoPlay muted loop preload="none">
@@ -48,11 +50,13 @@ const IndexPage = () => (
               alt="level up icon"
             />
           </h2>
-          <p>
-            We experience delivering high-impact projects. We enjoy the hard
-            challenges and can help build an environment that is friendly for
-            junior developers.
-          </p>
+          <div className={styles['sectionContent']}>
+            <p>
+              We experience delivering high-impact projects. We enjoy the hard
+              challenges and can help build an environment that is friendly for
+              junior developers.
+            </p>
+          </div>
         </div>
         <div className={classNames(styles['section'], styles['more'])}>
           <video autoPlay muted loop preload="none">
@@ -61,11 +65,13 @@ const IndexPage = () => (
           <h2 className={styles['title']}>
             More Than <span className="monospace">{`<Developers />`}</span>
           </h2>
-          <p>
-            We are problem solvers, entrepreneurs, designers, architects,
-            engineers, and much more. Together we can discover the best
-            technological approach to your business needs.
-          </p>
+          <div className={styles['sectionContent']}>
+            <p>
+              We are problem solvers, entrepreneurs, designers, architects,
+              engineers, and much more. Together we can discover the best
+              technological approach to your business needs.
+            </p>
+          </div>
         </div>
       </div>
     </div>

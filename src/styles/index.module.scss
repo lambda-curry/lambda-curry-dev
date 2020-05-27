@@ -1,8 +1,9 @@
 @import './tailwind';
 
+$minHeight: 768px;
+
 .hero {
   height: 100vh;
-  min-height: 600px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -11,6 +12,11 @@
   @apply py-32;
   @apply px-4;
   @apply bg-gray-300;
+  // TODO: figure out min-height for mobile
+
+  @media (min-width: 900px) {
+    min-height: $minHeight;
+  }
 }
 
 .logo {
@@ -39,12 +45,12 @@
 .row {
   @media (min-width: 900px) {
     display: flex;
-    min-height: 600px;
+    min-height: $minHeight;
   }
 }
 
 .col {
-  min-height: 600px;
+  min-height: $minHeight;
   flex: 2;
   display: flex;
   flex-direction: column;
@@ -60,6 +66,7 @@
 }
 
 .section {
+  box-sizing: border-box;
   @apply py-8;
   @apply px-4;
   position: relative;
@@ -75,7 +82,7 @@
     flex: 3;
 
     @media (min-width: 900px) {
-      p {
+      .section-content {
         opacity: 1;
         height: 100%;
         transition: height 0.5s ease-out, opacity 0.5s ease-out;
@@ -83,15 +90,20 @@
     }
   }
 
-  p {
-    @apply mx-4;
-
+  &-content {
     @media (min-width: 900px) {
       height: 0;
       overflow: hidden;
       opacity: 0;
       transition: height 1s ease-out, opacity 0.8s ease-out;
     }
+  }
+
+  p {
+    @apply p-4;
+    @apply mx-4;
+    @apply rounded;
+    background-color: rgba(255, 255, 255, 0.8);
   }
 
   video {
@@ -130,13 +142,24 @@
     background-size: cover;
   }
 
-  .title span {
-    font-family: 'Kaushan Script', cursive;
+  .title {
+    z-index: 1;
+    span {
+      font-family: 'Kaushan Script', cursive;
+    }
+  }
+
+  .section-content {
+    z-index: 1;
   }
 }
 
 .senior {
   color: white;
+
+  p {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 
   video {
     opacity: 0.8;
