@@ -6,6 +6,8 @@ import Logo from '../images/logo.svg'
 import LevelUp from '../images/levelup.svg'
 import Abstract from '../images/Abstract.webm'
 import CoffeeBeans from '../images/CoffeeBeans.webm'
+import AbstractMP4 from '../images/Abstract.mp4'
+import CoffeeBeansMP4 from '../images/CoffeeBeans.mp4'
 import styles from '../styles/index.module.scss'
 import classNames from 'classnames'
 
@@ -28,7 +30,7 @@ const IndexPage = () => (
       <div className={styles['col']}>
         <div className={classNames(styles['section'], styles['austin'])}>
           <h2 className={styles['title']}>
-            Based in <span>Austin, Texas</span>
+            Based in <span>Austin,&nbsp;Texas</span>
           </h2>
           <div className={styles['sectionContent']}>
             <p>
@@ -41,9 +43,10 @@ const IndexPage = () => (
         <div className={classNames(styles['section'], styles['senior'])}>
           <video autoPlay muted loop preload="none">
             <source src={CoffeeBeans} type="video/webm" />
+            <source src={CoffeeBeansMP4} type="video/mp4" />
           </video>
           <h2 className={styles['title']}>
-            Senior Level Talent{' '}
+            Senior Level Talent&nbsp;
             <img
               className={styles['levelUp']}
               src={LevelUp}
@@ -61,6 +64,7 @@ const IndexPage = () => (
         <div className={classNames(styles['section'], styles['more'])}>
           <video autoPlay muted loop preload="none">
             <source src={Abstract} type="video/webm" />
+            <source src={AbstractMP4} type="video/mp4" />
           </video>
           <h2 className={styles['title']}>
             More Than <span className="monospace">{`<Developers />`}</span>
