@@ -14,7 +14,7 @@ $minHeight: 768px;
 
   @media (min-width: 900px) {
     height: 100vh;
-    height: -webkit-fill-available;
+    height: fit-content;
     min-height: $minHeight;
   }
 }
@@ -63,7 +63,7 @@ $minHeight: 768px;
   @media (min-width: 1200px) {
     flex: 1;
     max-height: 100vh;
-    max-height: -webkit-fill-available;
+    max-height: fit-content;
   }
 }
 
