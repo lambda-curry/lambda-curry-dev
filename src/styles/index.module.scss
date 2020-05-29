@@ -68,6 +68,7 @@ $minHeight: 768px;
 }
 
 .section {
+  cursor: pointer;
   box-sizing: border-box;
   @apply py-8;
   @apply px-4;
