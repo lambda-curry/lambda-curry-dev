@@ -32,6 +32,7 @@ const IndexPage = () => (
           <h2 className={styles['title']}>
             Based in <span>Austin,&nbsp;Texas</span>
           </h2>
+          <span className={styles['sectionViewMore']}>Tap to view more</span>
           <div className={styles['sectionContent']}>
             <p>
               We are an all American dev shop in the middle of the "Silicon
