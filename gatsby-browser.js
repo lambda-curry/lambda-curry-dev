@@ -11,3 +11,12 @@ if ('ontouchstart' in document.documentElement) {
 } else {
   document.body.classList.add('no-touch')
 }
+
+// https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+window.addEventListener(
+  'resize',
+  document.documentElement.style.setProperty(
+    '--vh',
+    `${window.innerHeight * 0.01}px`
+  )
+)
