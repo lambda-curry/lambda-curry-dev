@@ -1,6 +1,7 @@
 @import './tailwind';
 
 $minHeight: 768px;
+$windowHeight: calc(var(--vh, 1vh) * 100);
 
 .hero {
   flex: 1;
@@ -14,7 +15,7 @@ $minHeight: 768px;
 
   @media (min-width: 900px) {
     height: 100vh;
-    height: var(--vh);
+    height: $windowHeight;
     min-height: $minHeight;
   }
 }
@@ -63,7 +64,7 @@ $minHeight: 768px;
   @media (min-width: 1200px) {
     flex: 1;
     max-height: 100vh;
-    max-height: var(--vh);
+    max-height: $windowHeight;
   }
 }
 
