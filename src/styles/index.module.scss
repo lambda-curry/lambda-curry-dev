@@ -82,8 +82,14 @@ $minHeight: 768px;
   &-view-more {
     display: none;
 
-    .touch & {
-      display: block;
+    @media (min-width: 900px) {
+      :global(.touch) & {
+        @apply text-base;
+        display: block;
+        opacity: 1;
+        height: 16px;
+        transition: height 0.5s ease-out, opacity 0.5s ease-out;
+      }
     }
   }
 
@@ -96,10 +102,11 @@ $minHeight: 768px;
         height: 100%;
         transition: height 0.5s ease-out, opacity 0.5s ease-out;
       }
-    }
 
-    .section-view-more {
-      display: none;
+      :global(.touch) & .section-view-more {
+        opacity: 0;
+        height: 0;
+      }
     }
   }
 

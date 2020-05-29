@@ -54,6 +54,7 @@ const IndexPage = () => (
               alt="level up icon"
             />
           </h2>
+          <span className={styles['sectionViewMore']}>Tap to view more</span>
           <div className={styles['sectionContent']}>
             <p>
               We experience delivering high-impact projects. We enjoy the hard
@@ -70,6 +71,7 @@ const IndexPage = () => (
           <h2 className={styles['title']}>
             More Than <span className="monospace">{`<Developers />`}</span>
           </h2>
+          <span className={styles['sectionViewMore']}>Tap to view more</span>
           <div className={styles['sectionContent']}>
             <p>
               We are problem solvers, entrepreneurs, designers, architects,
