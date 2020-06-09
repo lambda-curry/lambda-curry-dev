@@ -24,5 +24,5 @@ window.addEventListener(
 const embed = window.document.createElement('script')
 embed.type = 'text/javascript'
 embed.setAttribute('data-coupon-id', '5e81727fd99ba59195983219')
-embed.src = `https://app.emeal.me/modal/dist/emeal-embed.min.js`
-document.body.appendChild(embed)
+embed.src = `https://app.emeal.me/static/dist/emeal-embed.min.js`
+document.body.querySelector('h1')?.parentNode?.appendChild(embed)
