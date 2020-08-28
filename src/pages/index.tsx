@@ -18,7 +18,13 @@ const Hero = () => (
     </h1>
     <h2 className={styles['subtitle']}>a digital development agency</h2>
 
-    <button className={styles['cta']}>Hire us now</button>
+    <a
+      className={styles['cta']}
+      href="mailto: jake@lambdacurry.dev, derek@lambdacurry.dev"
+      target="_blank"
+    >
+      Hire us now
+    </a>
   </div>
 )
 

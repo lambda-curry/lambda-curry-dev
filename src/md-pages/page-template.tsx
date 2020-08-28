@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 export default function Template({
   data: {
     markdownRemark: {
-      frontmatter: { title },
+      frontmatter: { title, test },
       html,
     },
   }, // this prop will be injected by the GraphQL query below.
@@ -17,6 +17,7 @@ export default function Template({
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
+        <p>{test}</p>
       </div>
     </div>
   )
@@ -27,6 +28,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        test
       }
     }
   }
